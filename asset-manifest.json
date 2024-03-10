@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Yevhenii-Bezeha/goit-react-woolf-hw-07-phonebook/static/css/main.79eb50f1.css",
-    "main.js": "/Yevhenii-Bezeha/goit-react-woolf-hw-07-phonebook/static/js/main.0a3f1526.js",
-    "static/media/404-Website-Page-Template.jpg": "/Yevhenii-Bezeha/goit-react-woolf-hw-07-phonebook/static/media/404-Website-Page-Template.f1b1bbcd64ed5f69fb4c.jpg",
-    "static/media/bg-image-2.jpg": "/Yevhenii-Bezeha/goit-react-woolf-hw-07-phonebook/static/media/bg-image-2.33cb2783140d9284a19e.jpg",
-    "index.html": "/Yevhenii-Bezeha/goit-react-woolf-hw-07-phonebook/index.html",
-    "main.79eb50f1.css.map": "/Yevhenii-Bezeha/goit-react-woolf-hw-07-phonebook/static/css/main.79eb50f1.css.map",
-    "main.0a3f1526.js.map": "/Yevhenii-Bezeha/goit-react-woolf-hw-07-phonebook/static/js/main.0a3f1526.js.map"
+    "main.css": "/goit-react-woolf-hw-07-phonebook/static/css/main.ea678da6.css",
+    "main.js": "/goit-react-woolf-hw-07-phonebook/static/js/main.816f50a0.js",
+    "static/media/404-Website-Page-Template.jpg": "/goit-react-woolf-hw-07-phonebook/static/media/404-Website-Page-Template.f1b1bbcd64ed5f69fb4c.jpg",
+    "static/media/bg-image-2.jpg": "/goit-react-woolf-hw-07-phonebook/static/media/bg-image-2.33cb2783140d9284a19e.jpg",
+    "index.html": "/goit-react-woolf-hw-07-phonebook/index.html",
+    "main.ea678da6.css.map": "/goit-react-woolf-hw-07-phonebook/static/css/main.ea678da6.css.map",
+    "main.816f50a0.js.map": "/goit-react-woolf-hw-07-phonebook/static/js/main.816f50a0.js.map"
   },
   "entrypoints": [
-    "static/css/main.79eb50f1.css",
-    "static/js/main.0a3f1526.js"
+    "static/css/main.ea678da6.css",
+    "static/js/main.816f50a0.js"
   ]
 }
