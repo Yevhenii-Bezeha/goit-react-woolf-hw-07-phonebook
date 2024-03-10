@@ -11,7 +11,7 @@ import './index.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename="/goit-react-hw-08-phonebook">
+  <BrowserRouter basename="/goit-react-woolf-hw-07-phonebook">
     <Provider store={store}>
       <App />
       <ToastContainer autoClose={2500} />

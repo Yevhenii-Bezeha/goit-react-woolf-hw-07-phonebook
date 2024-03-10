@@ -2,7 +2,7 @@
   "name": "react-homework-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Yevhenii-Bezeha/goit-react-woolf-hw-07-phonebook/",
+  "homepage": "https://Yevhenii-Bezeha.github.io/goit-react-woolf-hw-07-phonebook/",
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
     "@reduxjs/toolkit": "^1.9.7",
