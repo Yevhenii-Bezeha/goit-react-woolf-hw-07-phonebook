@@ -1,20 +1,17 @@
 import ReactDOM from 'react-dom';
 import React, { useEffect } from 'react';
 import { toast } from 'react-toastify';
-import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
-
-import { editContactThunk } from 'redux/operations';
-
 import {
   CancelButton,
-  HeaderModalWrapper,
   SaveButton,
   StyledModalForm,
   StyledWrapperModal,
   StyledWrapperOverlay,
 } from './StyledModal';
+import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { editContactThunk } from 'redux/operations';
+import styled from 'styled-components';
 
 const rootModal = document.querySelector('#modal');
 
@@ -84,11 +81,15 @@ const Modal = ({ close, name, number, id }) => {
   );
 };
 
-export default Modal;
+const HeaderModalWrapper = styled.div`
+  text-align: center;
 
-Modal.propTypes = {
-  close: PropTypes.func.isRequired,
-  name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-};
+  h2 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 16px;
+  }
+`;
+
+export default Modal;

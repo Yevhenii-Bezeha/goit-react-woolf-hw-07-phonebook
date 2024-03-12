@@ -18,7 +18,7 @@ export const StyledSearchLabel = styled.label`
 
 export const StyledInputSearchWrapper = styled.div`
   margin: 0 auto;
-  width: 270px;
+  width: 210px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -35,7 +35,6 @@ export const StyledInputSearchWrapper = styled.div`
 `;
 
 export const StyledSearchInput = styled.input`
-  min-width: 250px;
   height: 40px;
   border: none;
   outline: none;

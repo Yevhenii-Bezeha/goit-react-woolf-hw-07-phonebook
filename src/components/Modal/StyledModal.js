@@ -118,14 +118,3 @@ export const CancelButton = styled.button`
     background-color: rgb(190, 61, 0);
   }
 `;
-
-export const HeaderModalWrapper = styled.div`
-  text-align: center;
-
-  h2 {
-    font-size: 16px;
-  }
-  p {
-    font-size: 16px;
-  }
-`;

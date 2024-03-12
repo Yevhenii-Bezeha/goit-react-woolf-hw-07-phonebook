@@ -1,14 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
-
-import { filterContacts } from 'redux/filterSlice';
-import { selectFilter } from 'redux/selectors';
-
 import {
   StyledSearchWrapper,
   StyledSearchLabel,
   StyledSearchInput,
   StyledInputSearchWrapper,
 } from './SearchContact.styled';
+import { filterContacts } from 'redux/filterSlice';
+import { selectFilter } from 'redux/selectors';
 
 export const SearchContacts = () => {
   const dispatch = useDispatch();
@@ -20,7 +18,7 @@ export const SearchContacts = () => {
 
   return (
     <StyledSearchWrapper>
-      <StyledSearchLabel htmlFor="filter">Contacts hunter👇</StyledSearchLabel>
+      <StyledSearchLabel htmlFor="filter">Find contacts👇</StyledSearchLabel>
       <StyledInputSearchWrapper>
         <StyledSearchInput
           id="filter"

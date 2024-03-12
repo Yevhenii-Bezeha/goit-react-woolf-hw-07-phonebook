@@ -1,53 +1,45 @@
-import { useEffect } from 'react';
+import { AddContact } from './AddContact/AddContact';
+import { AllContacts } from './AllContacts/AllContacts';
+import { SearchContacts } from './SearchContact/SearchContact';
 import { useDispatch, useSelector } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
-import styled from 'styled-components';
-
+import { selectContacts, selectError, selectIsLoading } from 'redux/selectors';
+import { useEffect } from 'react';
+import { fetchContactsThunk } from 'redux/operations';
 import Loader from './Loader/Loader';
-import { Register } from 'pages/Register/Register';
-import { Login } from 'pages/Login/Login';
-import { NotFound } from 'pages/NotFound/NotFound';
-import { Layout } from './Layout/Layout';
-import { refreshThunk } from 'redux/auth/operations';
-import { PrivateRoute } from 'hoc/PrivateRoute';
-import { GamePlug } from './GamePlug/GamePlug';
-import { selectIsRefresh } from 'redux/auth/selectors';
-import { Home } from 'pages/Home/Home';
+import { AppWrapper, StyledHeaderH1, StyledPlug } from './StyledApp';
+import styled from 'styled-components';
 
 export const App = () => {
   const dispatch = useDispatch();
-  const isRefresh = useSelector(selectIsRefresh);
+  const contacts = useSelector(selectContacts);
+  const error = useSelector(selectError);
+  const loading = useSelector(selectIsLoading);
 
   useEffect(() => {
-    dispatch(refreshThunk());
+    dispatch(fetchContactsThunk());
   }, [dispatch]);
 
-  return isRefresh ? (
-    <LoaderWrapper>
-      <Loader />
-    </LoaderWrapper>
-  ) : (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<GamePlug />} />
-        <Route
-          path="/home"
-          element={
-            <PrivateRoute>
-              <Home />
-            </PrivateRoute>
-          }
-        />
-        <Route path="register" element={<Register />} />
-        <Route path="login" element={<Login />} />
-      </Route>
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+  return (
+    <AppWrapper>
+      <Blur></Blur>
+      <StyledHeaderH1>PHONEBOOK</StyledHeaderH1>
+      <div>
+        <AddContact />
+        <SearchContacts />
+        {!contacts.length && !error && !loading && (
+          <StyledPlug>There are no contacts yet😭</StyledPlug>
+        )}
+        {error && <h2>{error}</h2>}
+        {loading && <Loader />}
+        <AllContacts />
+      </div>
+    </AppWrapper>
   );
 };
 
-const LoaderWrapper = styled.div`
-  display: block;
-  width: 150px;
-  margin: 0 auto;
+const Blur = styled.div`
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(4px);
+  z-index: -1;
 `;

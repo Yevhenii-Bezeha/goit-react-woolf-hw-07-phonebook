@@ -1,15 +1,13 @@
 import { useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
-
-import { selectDeletedId, selectIsLoading } from 'redux/selectors';
-import { useModal } from 'hooks/useModal';
-import Modal from 'components/Modal/Modal';
-
 import {
   OneContactDeleteButton,
   StyledOneContactLi,
   StyledSpanModal,
 } from './OneContact.styled';
+import PropTypes from 'prop-types';
+import { selectDeletedId, selectIsLoading } from 'redux/selectors';
+import { useModal } from 'hooks/useModal';
+import Modal from 'components/Modal/Modal';
 
 export const OneContact = ({ id, name, number, deleteContact }) => {
   const loading = useSelector(selectIsLoading);
